@@ -1,25 +1,10 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-		import { ViewTransitions } from "astro:transitions";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { ViewTransitions } from "astro:transitions";
+import Layout from "../layouts/layout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<ViewTransitions/>
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			Testing zendesk web chat widget with ViewTransitions
-		</main>
-		<script
-          id="ze-snippet"
-          src="https://static.zdassets.com/ekr/snippet.js?key=c01cd239-29ef-41a1-b7f9-ca3ccdc587c2"
-        />
-	</body>
-</html>
+<Layout />
