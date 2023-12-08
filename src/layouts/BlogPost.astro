@@ -4,6 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import { ViewTransitions } from "astro:transitions";
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -13,6 +14,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
+		<ViewTransitions />
 		<style>
 			main {
 				width: calc(100% - 2em);
@@ -81,5 +83,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			</article>
 		</main>
 		<Footer />
+		<script
+          id="ze-snippet"
+          src="https://static.zdassets.com/ekr/snippet.js?key=c01cd239-29ef-41a1-b7f9-ca3ccdc587c2"
+        />
 	</body>
 </html>
